@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+<head>
+<title>demo</title>
+<meta charset="utf-8">
+<meta name="viewport"content="width=device-width,initialscale=1.0">
+</head>
+<body>
+<label>ITEMS</label><select id="mysp" onChange="mys()">
+<option value="pen">PEN</option>
+<option value="book">BOOK</option>
+<option value="scale">SCALE</option>
+<option value="bag">BAG</option>
+<option value="pencil">PENCIL</option>
+</select>
+<script type="text/javascript">
+function mys()
+{
+x=document.getElementById("mysp").value
+document.getElementById("ps").innerText=x
+}
+</script>
+<br><br>
+<table><tr><td>Your Selection=</td><td><p id="ps"</p></td></tr></table>
+</body>
+</html>
