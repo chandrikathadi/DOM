@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+<head>
+<title>Select Multiple values Display</title>
+</head>
+<body>
+<form>
+<label for="mi">Choose values:</label>
+<select id="mi" multiple onchange="dsv()">
+  <option value="book">BOOK</option>
+  <option value="scale">SCALE</option>
+  <option value="bag">BAG</option>
+  <option value="pencil">PENCIL</option>
+</select>
+</form>
+
+<p id="ps">Selected values will be displayed here</p>
+
+<script>
+function dsv() {
+  var x = [];
+  var y = document.getElementById("mi");
+  
+  for (var i = 0; i < y.options.length; i++) {
+    if (y.options[i].selected) {
+      x.push(y.options[i].value);      
+}
+  }
+
+  document.getElementById("ps").innerText = "Selected values: " + x.join(', ');
+}
+</script>
+
+</body>
+</html>
