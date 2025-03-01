@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+<head>
+<title>demo</title>
+</head>
+<body>
+<form name="fm1">
+<label for="fage">Age:</label><input type="text"name="fage">
+<input type="submit" value="submit"onClick="allnumeric(document.fm1.fage)">
+</form>
+<script type="text/javascript">
+
+function allnumeric(inputtxt)
+{
+var numbers=/^\d{2}$/
+if(inputtxt.value.match(numbers))
+{
+alert("Your  Registration number has accepted.....");
+document.fm1.fname.focus();
+return true;
+}
+else{
+alert("Age must be 2 Digit Number");
+document.fm1.fage.focus();
+return false;
+}
+}
+</script>
+</body>
+</html>
