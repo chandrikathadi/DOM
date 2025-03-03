@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website URL Validation</title>
+    <style>
+        body{
+            background-color: black;
+            color : white;
+        }
+    </style>
+</head>
+<body>
+
+    <label for = "url_input">Enter your URL : </label>
+    <input id = "url_input" value = "" type = "text">
+    <input type = "submit" value = 'Validate' onclick = validate()>
+
+    <script>
+        validate = () =>{
+            url = document.getElementById('url_input').value
+            reg  = /^(https?:\/\/[0-9a-zA-Z]([-.\w]*[0-9a-zA-Z])*(:\d+)?(\/?)([a-zA-Z0-9\-.\?\,\/\\\+&%$#_]*)?)$/
+            if(!reg.test(url)){
+                alert("Invalid!")
+            }
+            else{
+                alert("Valid!")
+            }
+        }
+    </script>
+</body>
+</html>
