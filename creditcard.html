@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>American Express CreditCard Number Validation</title>
+    <style>
+        body{
+            background-color: black;
+            color : white;
+        }
+    </style>
+</head>
+<body>
+
+    <label for = "cardno">Enter American Express card number : </label>
+    <input type = "text" id = "cardno">
+    <input type = "submit" value = "Verify" onclick = verify()>
+
+    <script>
+        verify = () => {
+            cardno = document.getElementById('cardno').value
+            reg_ex = /^(?:3[47][0-9]{13})$/
+
+            if(cardno.match(reg_ex)){
+                alert("Valid AE Credit Card")
+            }
+
+            else{
+                alert("Invalid!")
+            }
+        }
+    </script>
+</body>
+</html>
